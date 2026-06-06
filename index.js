@@ -18,9 +18,9 @@ console.log(canCastSpell(true, false))
  * @returns {boolean} whether the creature is hidden from the observer
  */
 function isHidden(hiding, aware) {
-  return hiding || aware;
+  return hiding || !aware;
 }
-console.log(isHidden(true, false))
+console.log(isHidden(false, false))
 
 
 /**
@@ -31,8 +31,9 @@ console.log(isHidden(true, false))
  * @returns {boolean} whether the strike hits
  */
 function doesStrikeHit(attack, ac) {
-  // TODO
+  return attack >= ac;
 }
+console.log(doesStrikeHit(87,70))
 
 /**
  * A strike is a critical hit if the attack value is at least
@@ -42,8 +43,9 @@ function doesStrikeHit(attack, ac) {
  * @returns {boolean} whether the strike is a critical hit
  */
 function doesStrikeCrit(attack, ac) {
-  // TODO
+  return attack >= ac + 10
 }
+console.log(doesStrikeCrit(67,54))
 
 /**
  * A creature can restore hit points (HP) by healing,
