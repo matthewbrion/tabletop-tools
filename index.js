@@ -6,8 +6,9 @@
  * @returns {boolean} whether the wizard can cast the spell
  */
 function canCastSpell(isSpellPrepared, hasScroll) {
-  // TODO
+  return isSpellPrepared || hasScroll;
 }
+console.log(canCastSpell(true, false))
 
 /**
  * A creature is hidden from an observer if it is actively hiding
@@ -17,8 +18,10 @@ function canCastSpell(isSpellPrepared, hasScroll) {
  * @returns {boolean} whether the creature is hidden from the observer
  */
 function isHidden(hiding, aware) {
-  // TODO
+  return hiding || aware;
 }
+console.log(isHidden(true, false))
+
 
 /**
  * A strike hits if the attack value is greater than or equal
