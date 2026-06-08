@@ -148,8 +148,17 @@ console.log(getRemainingHp(2645, 978, 5290))
  * @returns {boolean} whether the creature can see
  */
 function canSee(light, vision) {
-  // TODO
+  if (light == "bright") {
+    return true
+} else if (light == "dim" && vision == "low-light") {
+    return true
+} else if (vision == "dark") {
+  return true
+} else {
+  return false
 }
+}
+console.log(canSee("bright", "dark"))
 
 /**
  * A strike deals damage if it hits, unless the strike is a critical hit,
