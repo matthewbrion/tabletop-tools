@@ -171,5 +171,12 @@ console.log(canSee("bright", "dark"))
  * @returns {number} damage dealt by the strike
  */
 function getStrikeDamage(attack, ac, damage) {
-  // TODO
+  if (doesStrikeCrit(attack, ac)) {
+    return damage * 2
+  } else if (doesStrikeHit(attack, ac)) {
+    return damage
+  } else {
+    return 0
+  }
 }
+console.log(getStrikeDamage(15, 12, 65))
