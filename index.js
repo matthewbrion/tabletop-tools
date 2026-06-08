@@ -106,8 +106,15 @@ console.log(getProficiencyBonus(19,"legndary"))
  * @returns {number} the cover bonus to AC
  */
 function getCoverBonus(behindObstacle, takingCover) {
-  // TODO
+  if (!behindObstacle) {
+    return 0
+  } else if (!takingCover) {
+    return 2
+  } else {
+    return 4
+  }
 }
+console.log(getCoverBonus(true, true))
 
 /**
  * A creature's current hit points (HP) is reduced by taking damage.
